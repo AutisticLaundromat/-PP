@@ -18,9 +18,5 @@ def draw():
             x -= speed
         if keyCode == RIGHT:
             x += speed
-        if keyCode == UP:
-            y -= speed
-        if keyCode == DOWN:
-            y += speed
 
     rect(x, y, 50, 50)
