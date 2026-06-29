@@ -1,43 +1,26 @@
-{
- "cells": [
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "dd682c82",
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "#SNAKE: MARTYNA SOWINSKA, DAWID SAKOWICZ, ALEKSANDRA BLICHARSKA\n",
-    "\n"
-   ]
-  }
- ],
- "metadata": {
-  "language_info": {
-   "name": "python"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 5
-}
+#global variables for free use więc nie musisz pisać liczbowo tylko piszesz słówka
+x = 200
+y = 200
+speed = 5
 
-
-SNAKE_COLOR = "#0000FF"
-FOOD_COLOR = "#FFFF00"
-BACKGROUND_COLOR = "#000000"
-
-
-class Snake:
-    pass
+#setup gry całego ekranu mam nadzieje że wiecie o co chodzi to takie intro nie wiem jak to wytłumaczyć
+def setup():
+    size(400, 400)
     
-class Food:
-    pass
+def draw():
+    global x, y
 
-def next_turn():
-    pass
+    background(220)
+    
+#tu ruch
+    if keyPressed:
+        if keyCode == LEFT:
+            x -= speed
+        if keyCode == RIGHT:
+            x += speed
+        if keyCode == UP:
+            y -= speed
+        if keyCode == DOWN:
+            y += speed
 
-def check_collisions():
-    pass
-
-def game_over():
-    pass
+    rect(x, y, 50, 50)
