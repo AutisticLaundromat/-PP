@@ -19,4 +19,4 @@ def draw():
         if keyCode == RIGHT:
             x += speed
 
-    rect(x, y, 50, 50)
+    rect(x, 345, 50, 50)
