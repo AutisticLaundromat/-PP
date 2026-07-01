@@ -40,7 +40,7 @@ class SpadajacyObiekt:
         fill(255, 0, 0)
         ellipse(self.x, self.y, 20, 20)
 def setup():
-    global gracz
+    global gracz, obiekty
 
     size(400, 400)
 
