@@ -63,13 +63,13 @@ class ObiektDoZbierania:
             self.resetuj()
 
     def pokaz(self):
-        fill(255, 255, 0) # Żółty dla obiektów do zbierania
+        fill(255, 255, 0) 
         ellipse(self.x, self.y, self.rozmiar, self.rozmiar)
 
 class ObiektDoUnikania(ObiektDoZbierania):
     def pokaz(self):
-        # Nadpisanie metody pokaz() dla zmiany wyglądu obiektu
-        fill(255, 0, 0) # Czerwony dla przeszkód
+       
+        fill(255, 0, 0) 
         ellipse(self.x, self.y, self.rozmiar, self.rozmiar)
 
 def setup():
@@ -87,7 +87,7 @@ def draw():
     global punkty, zycia
     background(0, 218, 255)
 
-    # Rysowanie interfejsu (HUD)
+  
     fill(0)
     textSize(16)
     text("Punkty: " + str(punkty), 10, 20)
@@ -97,12 +97,11 @@ def draw():
         textAlign(CENTER)
         textSize(32)
         text("KONIEC GRY", width/2, height/2)
-        return # Zatrzymanie logiki gry
+        return 
 
     gracz.ruch()
     gracz.pokaz()
 
-    # Logika obiektów do zbierania
     for oz in obiekty_do_zbierania:
         oz.aktualizuj()
         oz.pokaz()
@@ -110,7 +109,6 @@ def draw():
             punkty += 1
             oz.resetuj()
 
-    # Logika obiektów do unikania
     for ou in obiekty_do_unikania:
         ou.aktualizuj()
         ou.pokaz()
